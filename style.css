@@ -130,3 +130,112 @@ footer{background:linear-gradient(#fff,#eef5fb)!important}
 #diagrammes svg text[fill="#ece8ff"]{fill:#fff}
 #diagrammes svg path[stroke="#8f7bd6"],#diagrammes svg line[stroke="#8f7bd6"]{stroke:#bba9ff}
 #diagrammes .hint{color:#8fe3ff;opacity:1}
+
+/* v4 : cartes à retourner, parties animées, images, logos */
+
+.plain{background:#eef6fd;border-left:4px solid #0b6fbf;color:#08263d;padding:14px 18px;border-radius:10px;margin:0 0 18px;line-height:1.65}.plain b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#0b6fbf;margin-bottom:4px}
+section:not(.clin) .plain{background:rgba(255,255,255,.1);color:#f6f3ff;border-color:#a46bff}section:not(.clin) .plain b{color:#cdb8ff}
+.fig canvas{display:block;width:100%;height:auto;background:#0b1f33;border-radius:14px}
+.ctl{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:10px 0}
+.ctl button{padding:6px 16px;border-radius:99px;border:1px solid var(--ln);background:#fff;color:#08263d;font-weight:600;cursor:pointer}
+.ctl label{display:flex;flex-direction:column;font-size:.85rem;min-width:220px;color:var(--ink)}.ctl output{font-weight:700}
+.lg{display:flex;flex-wrap:wrap;gap:6px 8px;margin-bottom:14px}.lg span{font-size:.78rem;padding:3px 11px;border-radius:99px;background:rgba(11,111,191,.12);border:1px solid var(--ln);color:var(--ink)}
+.tb{border-collapse:collapse;margin:14px 0;width:100%;max-width:640px;color:#08263d}.tb th,.tb td{border:1px solid #8fb4d3;padding:8px 12px;text-align:center}.tb th{background:#e3f0fa}
+.phs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.ph{margin:0}.ph img{width:100%;border-radius:12px;display:block;border:0;background:transparent}.ph figcaption{font-size:.72rem;opacity:.65;margin-top:4px;color:var(--ink)}
+.inst{position:absolute;top:14px;left:0;right:0;z-index:5;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;padding:0 16px;color:#fff;pointer-events:none}
+.inst div{display:flex;align-items:center;gap:12px;max-width:340px}.inst img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:transparent}.inst span{font-weight:600;font-size:.85rem;line-height:1.3}
+.inst.foot{position:static;color:#08263d;padding:0 0 18px;pointer-events:auto}
+h2 small{display:block;font:600 .72rem 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-bottom:8px;color:var(--ac)}
+.phs{grid-template-columns:repeat(auto-fit,minmax(min(410px,100%),632px));justify-content:start}
+.ph img{max-height:446px;object-fit:contain}
+.k details.tx,.k .tg .tq{font-size:.9rem}
+.clin .hint{color:#0b6fbf!important}
+/* v5 : liste à déplier, étoile, thèmes Mars / espace */
+:root{--tgq:#1a1245;--tgqc:#fff;--tga:#7a5fd6;--tgac:#fff}
+.clin{--tgq:#fff;--tgqc:#08263d;--tga:#0b6fbf;--tgac:#fff}
+.fcs{display:flex;flex-direction:column;gap:10px;margin:22px 0;max-width:900px}
+.tg{margin:12px 0;border-radius:14px;border:1px solid var(--ln);overflow:hidden;text-align:left}
+.fcs .tg{margin:0}
+.tg>summary.tq{list-style:none;display:flex;flex-direction:column;gap:4px;position:relative;margin:0;padding:16px 54px 16px 20px;background:var(--tgq);color:var(--tgqc);font-weight:600;font-size:1.02rem;line-height:1.5;cursor:pointer}
+.tg>summary.tq::-webkit-details-marker{display:none}
+.tg>summary.tq::marker{content:""}
+.tg>summary.tq:hover{filter:brightness(1.08)}
+.tg>summary.tq:focus-visible{outline:3px solid #47d7ff;outline-offset:-3px}
+.tg>summary.tq::after{content:"";position:absolute;right:22px;top:50%;width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:translateY(-75%) rotate(45deg);transition:transform .25s}
+.tg[open]>summary.tq::after{transform:translateY(-25%) rotate(-135deg)}
+.tg small{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7;font-weight:700}
+.tg .ta{padding:16px 20px 18px;background:var(--tga);color:var(--tgac);line-height:1.6;font-size:.97rem;animation:tgo .3s ease}
+.tg .ta small{margin-bottom:4px}
+@keyframes tgo{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.k .tg{margin-top:12px}
+@media(prefers-reduced-motion:reduce){.tg .ta{animation:none}}
+
+/* petite étoile bleue sur les cartes cliquables animées */
+.k{padding-right:40px}
+.k::after{content:"";position:absolute;top:10px;right:12px;width:20px;height:20px;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232d9cff' d='M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 4px rgba(45,156,255,.9));animation:stw 2.8s ease-in-out infinite}
+@keyframes stw{50%{transform:scale(1.2) rotate(18deg);opacity:.8}}
+@media(prefers-reduced-motion:reduce){.k::after{animation:none}}
+
+/* Chapitre 2 : thème Mars orange, assorti au tube */
+.mars,.bridge{--tgq:#3a1608;--tgqc:#fff;--tga:#c1440e;--tgac:#fff}
+.bridge{--tgq:#fff3e6;--tgqc:#3a1608;--ac:#ff8a3c}
+section.mars{--bg:#240f07;--ink:#fff1e4;--mut:#f3cfb3;--ac:#ff8a3c;--ac2:#ffc27a;--card:rgba(255,140,60,.12);--ln:rgba(255,150,70,.5);color-scheme:dark;
+background:radial-gradient(1.5px 1.5px at 14% 24%,rgba(255,205,160,.7),transparent),radial-gradient(1px 1px at 72% 18%,rgba(255,205,160,.6),transparent),radial-gradient(1.5px 1.5px at 38% 80%,rgba(255,180,120,.6),transparent),radial-gradient(1px 1px at 88% 66%,rgba(255,205,160,.5),transparent),radial-gradient(ellipse 55% 30% at 85% 35%,rgba(255,138,60,.18),transparent),radial-gradient(ellipse 50% 30% at 10% 65%,rgba(193,68,14,.22),transparent),#240f07}
+.bridge{background:linear-gradient(rgba(10,6,24,0) 0%,rgba(10,6,24,.7) 6%,#0a0618 16%,#2a0f10 30%,#5a1d0a 48%,#923311 66%,#9a3a12 78%,#5a1d0a 90%,#240f07 100%)}
+.bridge .devs .dv{--cc:#c1440e}
+.bridge .tg{max-width:68ch;margin:12px auto}
+.mars canvas.sim,.mars .fig canvas{background:#1a0903;border-color:var(--ln)}
+.mars .plain{background:rgba(255,138,60,.12);color:#fff1e4;border-color:#ff8a3c}
+.mars .plain b{color:#ffc27a}
+.mars .lg span{background:rgba(255,138,60,.18)}
+.mars #tl text{fill:#fff1e4}.mars #tl circle{fill:#ff8a3c}.mars #tl line{stroke:#ff8a3c}
+.mars .grid .card{--cc:#ff8a3c}
+.mars h2 small{color:#ffc27a}
+
+/* transitions douces entre les thèmes (aucune ligne franche) */
+.chap{font:600 .8rem "Space Grotesk",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8fe3ff;margin:0 auto 8px}
+#spectre::before{content:"";position:absolute;left:0;right:0;top:0;height:340px;pointer-events:none;z-index:-1;background:linear-gradient(#240f07 0%,rgba(36,15,7,.9) 10%,rgba(36,15,7,.68) 26%,rgba(36,15,7,.4) 46%,rgba(36,15,7,.18) 68%,rgba(36,15,7,.05) 86%,rgba(36,15,7,0) 100%)}
+
+/* toggle de l'en-tête : cliquable (le bloc parent ignore la souris) */
+#hero .t .tg{pointer-events:auto;max-width:56ch;margin:12px auto;text-align:left}
+
+/* fiche des formules : bouton + mode impression / PDF */
+.pr-only{display:none}
+.pbtn{margin:4px 0 0;padding:11px 22px;font-weight:600}
+.pnote{font-size:.85rem;margin:8px 0 0}
+@media print{
+  @page{size:A4 portrait;margin:10mm}
+  html,body{background:#fff!important;padding:0!important;margin:0!important;overflow:visible!important;color:#000}
+  body>*:not(#formules){display:none!important}
+  #formules{display:block!important;position:static!important;background:#fff!important;padding:0!important;color:#000!important}
+  #formules .w{max-width:none!important;opacity:1!important;transform:none!important}
+  #formules h2{font-size:22pt;margin:0 0 2mm;color:#000}
+  #formules .pbtn,#formules .pnote{display:none!important}
+  .pr-only{display:block!important}
+  .pr-h{font-size:9.5pt;color:#333;margin-bottom:4mm}
+  .pr-f{font-size:8pt;color:#444;margin-top:5mm;border-top:1px solid #999;padding-top:2mm}
+  #formules .grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:3mm!important;margin:0!important}
+  #formules .card{break-inside:avoid;background:#fff!important;border:1px solid #222!important;border-radius:2mm;box-shadow:none!important;padding:3mm!important;font-size:9pt!important;color:#000!important;overflow:visible!important}
+  #formules .card>b{color:#000!important;font-size:10pt}
+  #formules .eq{color:#000!important;font-size:12pt!important;margin:1.5mm 0!important}
+  *{-webkit-print-color-adjust:economy;print-color-adjust:economy}
+}
+
+/* étoile bleue : légende de l'accueil */
+.starnote{font-size:.95rem;color:#dfe9ff;margin:6px auto 0}
+.stI{display:inline-block;vertical-align:-4px;width:20px;height:20px;margin-right:4px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232d9cff' d='M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 4px rgba(45,156,255,.9))}
+.phs:empty{display:none}
+
+
+
+/* transition douce partie 3 -> partie 4 (fondu, sans ligne) */
+#cmd{padding-top:290px;background:linear-gradient(rgba(255,255,255,0) 0,rgba(255,255,255,.04) 10%,rgba(255,255,255,.18) 28%,rgba(255,255,255,.45) 48%,rgba(255,255,255,.75) 68%,rgba(255,255,255,.93) 84%,#fff 100%) top/100% 340px no-repeat,linear-gradient(#fff,#fff) 0 340px/100% 100% no-repeat}
+
+/* mini animation 3D de la partie 4 */
+.mini3d{float:right;width:230px;margin:-4px 0 8px 16px;text-align:center;pointer-events:none}
+.mini3d canvas{display:block;width:230px;height:120px}
+.mini3d small{display:block;font:600 .64rem "Space Grotesk",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#4a6a85}
+#cmd .plain{display:flow-root}
+@media(max-width:800px){.mini3d{float:none;margin:0 auto 8px}}
+@media print{.mini3d{display:none!important}}

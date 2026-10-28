@@ -4,17 +4,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body>
 <button id="sb" aria-label="Ouvrir le sommaire"></button>
-<aside id="side"><h4>Du photon à l’image</h4><small>Imagerie X – N. BEN AMEUR, ISTMT</small>
+<aside id="side"><h4>Du photon à l’image</h4><small>Chapitre 1 · Imagerie X – N. BEN AMEUR, ISTMT</small>
 <b>Atome et matière</b><a href="#hero">L’atome</a><a href="#diagrammes">Notions de base</a>
 <b>Interaction rayonnement-matière</b><a href="#pe">Effet photoélectrique</a><a href="#co">Effet Compton</a><a href="#pa">Création de paire</a>
 <b>Production des rayons X</b><a href="#bridge">Des interactions aux RX</a><a href="#tube">Le tube et le spectre</a><a href="#histoire">Histoire</a><a href="#tubedet">Le tube, en détail</a>
 <b>Formation de l’image</b><a href="#chaine">De l’électron à l’image</a><a href="#thorax">Radio du thorax</a><a href="#schemas">Flou et agrandissement</a><a href="#imgdet">Contraste, flous, détecteurs</a><b>Pour finir</b><a href="#formules">Fiche des formules</a><a href="#quiz">Quiz</a></aside>
 
-<section id="hero"><canvas id="atom"></canvas>
-<div class="t"><h1>Du photon à l’image</h1>
+<section id="hero"><div class="inst"><div><img src="images/logo-utm.png" alt="Logo Université de Tunis El Manar"><span>Université de Tunis El Manar</span></div><div><img src="images/logo-istmt.png" alt="Logo ISTMT"><span>Institut Supérieur des Technologies Médicales de Tunis</span></div></div><canvas id="atom"></canvas>
+<div class="t"><div class="chap">Chapitre 1 · Imagerie X : principe de fonctionnement</div><h1>Du photon à l’image</h1>
 <p style="max-width:56ch">Un voyage interactif, de l’atome aux rayons X, jusqu’à la radiographie du thorax. Fais bouger l’électron et observe ce qui change.</p>
 <div class="b"><button data-s="g">Fondamental</button><button data-s="e">Excité</button><button data-s="i">Ionisé</button></div>
-<p id="acap" style="font-size:.95rem">Atome fondamental : nombre d’électrons = nombre de protons.</p></div></section>
+<p id="acap" style="font-size:.95rem">Atome fondamental : nombre d’électrons = nombre de protons.</p>
+<p id="starnote" class="starnote"><span class="stI" aria-hidden="true"></span> L’étoile bleue signale un élément cliquable : touche-le pour ouvrir une animation.</p></div></section>
 
 <section id="diagrammes"><div class="w"><h2>Les notions de base</h2><div class="grid gd">
 <div class="card"><b>De la matière au quark</b><svg id="zm" viewBox="0 0 560 160"></svg></div>
@@ -53,7 +54,7 @@
 <div class="bridge" id="bridge"><svg width="0" height="0" style="position:absolute"><defs><symbol id="d-rad" viewBox="0 0 100 80"><path d="M18 8v62M18 16h30M48 10h16v14H48zM56 26l-14 30M56 26l14 30" stroke-dasharray="0"/><path d="M8 64h84M28 56h52"/></symbol><symbol id="d-ct" viewBox="0 0 100 80"><circle cx="50" cy="36" r="26"/><circle cx="50" cy="36" r="14"/><path d="M6 66h88M22 54h56"/></symbol><symbol id="d-arm" viewBox="0 0 100 80"><path d="M64 16H42a26 26 0 0 0 0 52h22"/><rect x="60" y="8" width="20" height="14"/><rect x="60" y="62" width="20" height="14"/><path d="M70 24v36" stroke-dasharray="3 4"/></symbol><symbol id="d-mam" viewBox="0 0 100 80"><path d="M22 72V22a14 14 0 0 1 14-14h6"/><rect x="40" y="6" width="24" height="14"/><path d="M52 22v14M30 38h46M30 52h46M52 54v14"/></symbol><symbol id="d-den" viewBox="0 0 100 80"><circle cx="56" cy="38" r="18"/><rect x="12" y="30" width="22" height="16"/><path d="M36 38h6" stroke-dasharray="3 3"/><rect x="78" y="32" width="8" height="12"/></symbol></defs></svg><div class="bgdev" aria-hidden="true"><svg class="ic" viewBox="0 0 100 80" style="left:4%;top:22%"><use href="#d-ct"/></svg><svg class="ic" viewBox="0 0 100 80" style="right:5%;top:12%"><use href="#d-arm"/></svg><svg class="ic" viewBox="0 0 100 80" style="left:30%;top:52%"><use href="#d-rad"/></svg><svg class="ic" viewBox="0 0 100 80" style="right:24%;top:46%"><use href="#d-mam"/></svg><svg class="ic" viewBox="0 0 100 80" style="left:-2%;top:68%"><use href="#d-den"/></svg></div><h2 style="position:relative">Des interactions aux rayons X</h2>
 <p style="position:relative">Freinage, ionisation et photons caractéristiques se produisent aussi dans le tube. Les mêmes photons servent partout en imagerie médicale : ils naissent dans un tube, traversent le corps, puis un détecteur les compte.</p><svg class="flow" viewBox="0 0 900 170" role="img" aria-label="Le tube émet des photons qui traversent le patient puis sont détectés"><rect x="40" y="52" width="70" height="46" rx="10" fill="#47d7ff" opacity=".85"/><path d="M110 75h620" class="dl" stroke="#ffd08a" stroke-width="3" fill="none"/><path d="M110 75L330 30M110 75L330 120" stroke="#ffd08a" stroke-width="1" opacity=".5"/><circle cx="450" cy="40" r="20" fill="#fff" opacity=".85"/><path d="M405 62q45-14 90 0v70h-90z" fill="#fff" opacity=".85"/><rect x="745" y="30" width="18" height="90" rx="4" fill="#0b1f33" stroke="#fff"/><text x="75" y="130" text-anchor="middle">Le tube crée les photons</text><text x="450" y="152" text-anchor="middle">Le corps les atténue</text><text x="754" y="140" text-anchor="middle">Le capteur les compte</text></svg><div class="devs"><div class="dv"><svg class="ic" viewBox="0 0 100 80"><use href="#d-rad"/></svg><b>Radiographie</b>Le tube éclaire le patient, le capteur plan reçoit l’image.</div><div class="dv"><svg class="ic" viewBox="0 0 100 80"><use href="#d-ct"/></svg><b>Scanner (CT)</b>Tube et détecteurs tournent autour du patient.</div><div class="dv"><svg class="ic" viewBox="0 0 100 80"><use href="#d-arm"/></svg><b>Arceau en C</b>Tube et capteur face à face, au bloc opératoire.</div><div class="dv"><svg class="ic" viewBox="0 0 100 80"><use href="#d-mam"/></svg><b>Mammographie</b>Basse énergie et compression pour voir le sein.</div><div class="dv"><svg class="ic" viewBox="0 0 100 80"><use href="#d-den"/></svg><b>Radio dentaire</b>Petit tube, capteur placé dans la bouche.</div></div></div>
 
-<section id="tube" class="clin"><div class="w rv"><h2>Production des rayons X : le tube</h2>
+<section id="tube" class="mars"><div class="w rv"><h2>Production des rayons X : le tube</h2>
 <p>Le filament de tungstène, chauffé à plus de 2200 °C, libère des électrons (mA = quantité). La haute tension les accélère vers l’anode de tungstène (kV = qualité). Leur freinage près des noyaux donne le spectre continu, les transitions K donnent les raies caractéristiques.</p>
 <div class="eq">E<sub>max</sub> (keV) = kVp &nbsp;|&nbsp; Intensité ∝ mA · kVp²</div>
 <div class="row"><div><canvas class="sim" id="tbC" width="600" height="260"></canvas><canvas class="sim" id="spC" width="600" height="220" style="margin-top:12px"></canvas></div>
@@ -61,8 +62,8 @@
 <label>Courant : <b id="mav"></b> mA</label><input id="ma" type="range" min="10" max="500" value="250">
 <div class="info" id="tbI"></div></div></div></div></section>
 
-<section id="histoire" class="clin" style="padding-top:10px"><div class="w"><h2>Histoire des rayons X</h2><div class="card"><svg id="tl" viewBox="0 0 760 150"></svg></div></div></section>
-<section id="tubedet" class="clin" style="padding-top:10px"><div class="w"><h2>Le tube, en détail</h2><div class="grid gx">
+<section id="histoire" class="mars" style="padding-top:10px"><div class="w"><h2>Histoire des rayons X</h2><div class="card"><svg id="tl" viewBox="0 0 760 150"></svg></div></div></section>
+<section id="tubedet" class="mars" style="padding-top:10px"><div class="w"><h2>Le tube, en détail</h2><div class="grid gx">
 <div class="card"><b>Histoire</b><ul><li>1895 : découverte des RX (Röntgen)</li><li>1896-1900 : radioactivité α et β (Henri Becquerel)</li><li>1897 : électron (Thomson)</li><li>1900 : rayonnement gamma (Paul Villard)</li><li>1932 : neutron (Chadwick)</li><li>1934 : radioactivité artificielle (Frédéric et Irène Joliot-Curie)</li><li>1964 : quarks (Gell-Mann)</li></ul></div>
 <div class="card"><b>Que sont les rayons X ?</b><br>Ondes électromagnétiques de longueur d’onde 10⁻¹² à 10⁻⁸ m, photons de 40 eV à 400 keV, de l’ordre des énergies de liaison des couches internes (keV). Domaine situé entre l’ultraviolet et les rayons gamma. Le tube cathodique (anode +, cathode −, alimentation haute tension) est l’ancêtre ; la source usuelle est le tube de Coolidge : vide poussé, deux électrodes (anode ou anticathode, et cathode).</div>
 <div class="card"><b>Cathode : filament et focalisation</b><br>Le filament de tungstène, chauffé à au moins 2200 °C par un courant de quelques ampères (effet thermoélectronique), émet les électrons ; intensité = quantité de rayons X. Un bon filament se vaporise peu, dure longtemps et a un point de fusion élevé. La pièce de focalisation (cylindre chargé négativement) évite la dispersion des électrons due à leur répulsion. Le bloc cathodique porte un petit et un grand filament.</div>
@@ -84,8 +85,8 @@
 <g class="st" data-n="7"><path d="M690 62V238" stroke="#333" stroke-width="7" stroke-dasharray="3 5"/><g class="bd"><circle cx="690" cy="40" r="11"/><text x="690" y="44">7</text></g></g>
 <g class="st" data-n="8"><rect x="798" y="54" width="30" height="192" rx="4" fill="#0b1f33"/><g id="cl"></g><g class="bd"><circle cx="813" cy="36" r="11"/><text x="813" y="40">8</text></g></g>
 <circle cx="30" cy="262" r="4" fill="#47d7ff"/><text x="40" y="266" font-size="12" fill="#4a6a85">électron</text><circle cx="110" cy="262" r="4" fill="#ff9d3d"/><text x="120" y="266" font-size="12" fill="#4a6a85">photon X (rouge : absorbé)</text></svg>
-<div id="plc"></div><div class="card info" id="pli" style="min-height:6.5em"></div>
-<p style="margin-top:22px"><b>Zoom animé sur chaque étape</b> : touche une carte.</p>
+<div class="card info" id="pli" style="min-height:6.5em"></div>
+<p style="margin-top:22px"><b>Les 8 étapes</b> : touche une carte pour zoomer, puis retourne la fiche pour le texte.</p>
 <div class="grid">
 <div class="card"><b>1. Filament</b><br>Effet thermoélectronique : le courant de chauffage fixe le nombre d’électrons.</div>
 <div class="card"><b>2. Focalisation</b><br>Un cylindre chargé négativement concentre le faisceau d’électrons.</div>
@@ -98,7 +99,7 @@
 
 <section id="thorax" class="clin" style="padding-top:20px"><div class="w rv"><h2>Radiographie du thorax</h2>
 <p>Une image d’atténuation : les poumons laissent passer les photons (noir), les os et le cœur les arrêtent (blanc). Règle les paramètres et observe contraste, bruit et flou.</p>
-<div class="row"><div style="text-align:center;background:#000;border-radius:10px;overflow:hidden"><canvas id="thC" width="440" height="356" style="width:min(100%,380px);image-rendering:auto"></canvas></div>
+<div class="row"><div style="text-align:center;background:#000;border-radius:10px;overflow:hidden"><canvas id="thC" width="660" height="534" style="width:min(100%,380px);image-rendering:auto"></canvas></div>
 <div class="card"><label>Tension : <b id="tkv"></b> kVp (qualité)</label><input id="tk" type="range" min="50" max="150" value="100">
 <label>Quantité : <b id="tmv"></b> mAs</label><input id="tm" type="range" min="0.5" max="20" step="0.5" value="4">
 <label><input type="checkbox" id="tg" checked> Grille anti-diffusion</label>
@@ -108,8 +109,9 @@
 <div class="eq">Flou géométrique = taille du foyer × h / (l − h)</div>
 <p style="font-size:.85rem">Modèle pédagogique simplifié : coefficients µ/ρ du cours (40, 100, 400 keV), énergie effective ≈ 0,4 × kVp.</p></div></section>
 <section id="schemas" class="clin" style="padding-top:10px"><div class="w"><h2>De la source à l’image, en schémas</h2>
-<div class="card"><b>Parcours d’un photon</b><canvas class="sim" id="pl" width="760" height="150"></canvas><div class="info" id="plI"></div></div>
-<div class="card" style="margin-top:14px"><b>Flou géométrique et agrandissement</b><div class="row"><canvas class="sim" id="fg" width="560" height="300"></canvas><div><label>Taille du foyer F : <b id="fgFv"></b> mm</label><input id="fgF" type="range" min="0.3" max="2" step="0.1" value="1"><label>Distance patient-détecteur h : <b id="fghv"></b> cm</label><input id="fgh" type="range" min="0" max="40" value="15"><label>Distance foyer-détecteur l : <b id="fglv"></b> cm</label><input id="fgl" type="range" min="100" max="200" value="150"><div class="info" id="fgI"></div></div></div></div></div></section>
+<div class="card"><b>Parcours d’un photon</b><canvas class="sim" id="pl" width="760" height="150"></canvas><div class="info" id="plI"></div></div></div></section>
+<section id="flougeo" class="clin" style="padding-top:10px"><div class="w"><h2>Flou géométrique et agrandissement</h2>
+<div class="card"><b>Flou géométrique et agrandissement</b><div class="row"><canvas class="sim" id="fg" width="560" height="300"></canvas><div><label>Taille du foyer F : <b id="fgFv"></b> mm</label><input id="fgF" type="range" min="0.3" max="2" step="0.1" value="1"><label>Distance patient-détecteur h : <b id="fghv"></b> cm</label><input id="fgh" type="range" min="0" max="40" value="15"><label>Distance foyer-détecteur l : <b id="fglv"></b> cm</label><input id="fgl" type="range" min="100" max="200" value="150"><div class="info" id="fgI"></div></div></div></div></div></section>
 <section id="imgdet" class="clin" style="padding-top:10px"><div class="w"><h2>L’image radiographique, en détail</h2><div class="grid gx">
 <div class="card"><b>Équipements radiographiques</b><br>Une salle comprend : tube à rayons X, détecteur, console d’opération (pupitre, table, support) et générateur (haute tension, chauffage). Pupitre : trois commandes essentielles, kVp (qualité), mA et temps de pose en s (quantité), plus des commandes auxiliaires (choix du filament…). Supports du tube : fixé au sol ou C-bras. Poste : tube, collimateur, plateau, capteur plan, colonne, chariot, cadre, bâti.</div>
 <div class="card"><b>Formation de l’image</b><br>Image de l’atténuation d’un faisceau de rayons X par le tissu traversé (µ faible ou élevé). Un seul photon : effet binaire, tout ou rien (1 ou 0). Plusieurs photons : modulation, somme d’effets binaires. L’image n’est pas l’objet lui-même mais la projection des coefficients µ de chaque structure atteinte. Le film noircit là où les rayons arrivent (clarté) ; il reste transparent là où ils sont arrêtés (opacité).</div>
@@ -121,7 +123,7 @@
 <div class="card"><b>Détecteurs</b><ul><li>Film radio</li><li>Cassette avec écran renforçateur</li><li>Plaques à phosphore (numérisation)</li><li>Capteurs plan (numérisation)</li></ul></div>
 <div class="card"><b>Dernières technologies</b><br>Tube suspendu au plafond entièrement automatique, système de suivi intelligent, positionnement automatique à une touche, examens assis ou debout. Écran tactile : programme d’anatomie APR, réglage des paramètres d’exposition (kV, mA, mAs, AEC), positionnement du patient. Détail de la texture des côtes et des poumons nettement amélioré avec des pixels de 100 µm au lieu de 139 µm.</div>
 </div></div></section>
-<section id="formules" class="clin"><div class="w rv"><h2>Fiche des formules</h2><div class="grid gx fm">
+<section id="formules" class="clin"><div class="w rv"><h2>Fiche des formules</h2><div class="pr-only pr-h">Imagerie X : principe de fonctionnement · ISTMT, Université de Tunis El Manar</div><button class="pbtn" type="button" onclick="window.print()">Imprimer la fiche (PDF, 1 page)</button><p class="pnote">Dans la fenêtre d’impression, choisis « Enregistrer au format PDF ». Seule cette fiche est imprimée.</p><div class="grid gx fm">
 <div class="card"><b>Photoélectrique</b><div class="eq">σ ∝ Z⁵ / E³</div>Dominant aux basses énergies.</div>
 <div class="card"><b>Compton</b><div class="eq">σ ∝ Z·E² (basse) · σ ∝ Z/E (haute)</div>γ + atome → γ′ + e⁻ + atome⁺</div>
 <div class="card"><b>Création de paire</b><div class="eq">γ + atome → e⁻ + e⁺ + atome</div>Annihilation : deux photons de 511 keV.</div>
@@ -130,9 +132,11 @@
 <div class="card"><b>Atténuation</b><div class="eq">I = I₀ · e<sup>−µx</sup></div>µ en cm⁻¹, x en cm.</div>
 <div class="card"><b>Contraste</b><div class="eq">C = (I₁ − I₂) / (I₁ + I₂)</div></div>
 <div class="card"><b>Agrandissement</b><div class="eq">M = l / (l − h)</div>l : foyer-détecteur, h : patient-détecteur.</div>
-<div class="card"><b>Flou géométrique</b><div class="eq">F · h / (l − h)</div>F : taille du foyer.</div></div></div></section>
+<div class="card"><b>Flou géométrique</b><div class="eq">F · h / (l − h)</div>F : taille du foyer.</div><div class="card"><b>Compton : photon diffusé</b><div class="eq">E′ = E₀ / [1 + (E₀/511)(1 − cos θ)]</div>E en keV.</div><div class="card"><b>Seuil de création de paire</b><div class="eq">hν ≥ 1,022 MeV</div>= 2 mₑc².</div><div class="card"><b>Énergie maximale du tube</b><div class="eq">E<sub>max</sub> (keV) = kVp</div>Intensité ∝ mA · kVp².</div><div class="card"><b>Flou cinétique</b><div class="eq">flou = vitesse × temps de pose</div>Cœur : 40 cm/s, 1/100 s → 4 mm.</div></div><div class="pr-only pr-f">Présenté par Mariem Chaouachi &amp; Zeineb Jarraya &amp; Nedra Boughanda · d’après le cours de Narjes BEN AMEUR, ISTMT</div></div></section>
 <section id="quiz" class="clin" style="padding-top:10px"><div class="w"><h2>Quiz</h2><div class="card" id="qz"></div></div></section>
-<footer style="background:#f3f8fc;color:#4a6a85;text-align:center;padding:30px 20px;font-size:.85rem"><div class="cr"><b>Présenté par Mariem Chaouachi &amp; Zeineb Jarraya &amp; Nedra Boughanda</b></div>D’après le cours « Imagerie X : principe de fonctionnement » de Narjes BEN AMEUR, ISTMT – Université de Tunis El Manar</footer>
+<footer style="background:#f3f8fc;color:#4a6a85;text-align:center;padding:30px 20px;font-size:.85rem"><div class="inst foot"><div><img src="images/logo-utm.png" alt="Logo Université de Tunis El Manar"><span>Université de Tunis El Manar</span></div><div><img src="images/logo-istmt.png" alt="Logo ISTMT"><span>Institut Supérieur des Technologies Médicales de Tunis</span></div></div><div class="cr"><b>Présenté par Mariem Chaouachi &amp; Zeineb Jarraya &amp; Nedra Boughanda</b></div>D’après le cours « Imagerie X : principe de fonctionnement » de Narjes BEN AMEUR, ISTMT – Université de Tunis El Manar</footer>
 
+<script src="hd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="course.js"></script>
 <script src="script.js"></script></body></html>
