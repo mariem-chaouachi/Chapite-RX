@@ -326,3 +326,12 @@ const draw=()=>{ph.forEach(p=>{if(!RM)p.x+=.045;const r=(p.x+2.9)/5.8*1.8,y=p.fy
 draw();loops.push(()=>{if(!vis)return;t+=RM?0:.012;draw()});
 }catch(e){box.style.display="none"}
 })();
+
+/* sommaire : suit le défilement de la page (le lien actif reste visible) */
+(()=>{const sd=document.getElementById("side");if(!sd)return;let last=null,tk=0;
+const follow=()=>{tk=0;const a=sd.querySelector("a.on");if(!a||a===last)return;last=a;const r=a.getBoundingClientRect(),s=sd.getBoundingClientRect();
+if(r.top<s.top+70||r.bottom>s.bottom-40)sd.scrollTo({top:sd.scrollTop+(r.top-s.top)-sd.clientHeight/2+a.offsetHeight/2,behavior:"smooth"})};
+addEventListener("scroll",()=>{if(!tk)tk=requestAnimationFrame(follow)},{passive:true});
+const sb=document.getElementById("sb");if(sb){sb.onclick=()=>{sd.classList.toggle("open");sb.classList.toggle("on",sd.classList.contains("open"));last=null;follow()};
+sd.addEventListener("click",e=>{if(e.target.closest("a"))sb.classList.remove("on")})}
+})();

@@ -129,4 +129,6 @@ const LG={peC:["photon incident (E₀)","électron éjecté","électron qui comb
 $$("canvas.sim").forEach(cv=>{if(cv.closest(".fig"))return;const g=cv.getContext("2d");["clearRect","fillRect","strokeRect","fill","stroke","fillText","strokeText","drawImage"].forEach(m=>{const f=g[m];g[m]=function(){if(cv._p)return;return f.apply(this,arguments)}});
 const bar=document.createElement("div");bar.className="ctl";const b=document.createElement("button");b.textContent="Pause";b.onclick=()=>{cv._p=!cv._p;b.textContent=cv._p?"Lecture":"Pause"};bar.append(b);cv.after(bar);
 if(LG[cv.id]){const l=document.createElement("div");l.className="lg";l.innerHTML=LG[cv.id].map(x=>`<span>${x}</span>`).join("");bar.after(l)}})});
+/* accueil : la question (liste à déplier) passe sous l’atome interactif */
+addEventListener("load",()=>setTimeout(()=>{const h=S("hero"),q=h&&h.querySelector(".t .tg"),a=S("atom");if(q&&a){q.classList.add("hq");a.after(q)}},0));
 })();
